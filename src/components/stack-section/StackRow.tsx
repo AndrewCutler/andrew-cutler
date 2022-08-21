@@ -8,17 +8,19 @@ const StackRow = ({
   imgAlt,
   subtitle,
   textContent,
+  invert,
 }: {
   imgSrc: string;
   imgAlt: string;
   subtitle: string;
   textContent: string;
+  invert: boolean;
 }): ReactElement => {
   return (
     <Flex
       paddingLeft={7}
-      bg='dark.500'
-      color='light.400'
+      bg={invert ? 'light.200' : 'dark.500'}
+      color={invert ? 'dark.400' : 'light.200'}
       alignItems='center'
       w='100vw'
       marginLeft={5}
