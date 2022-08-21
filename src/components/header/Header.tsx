@@ -17,15 +17,6 @@ const Header = (): ReactElement => {
       justifyContent='space-between'
     >
       <ImageRound src={photo} alt='Andrew Cutler' />
-      {/* <Image
-        src={photo}
-        alt='Andrew Cutler'
-        borderRadius='50%'
-        border='3px solid'
-        borderColor='light.700'
-        w='70px'
-        h='70px'
-      /> */}
       <Flex alignItems='center' justifyContent='center' flexDirection='column'>
         <Text fontSize='3xl' marginLeft={4}>
           Andrew Cutler
