@@ -10,7 +10,7 @@ import {
   extendTheme,
 } from '@chakra-ui/react';
 import Header from './components/header/Header';
-import FrontEnd from './components/frontend/FrontEnd';
+import Skills from './components/skills/Skills';
 
 const theme = extendTheme({
   fonts: {
@@ -68,7 +68,7 @@ export const App = () => (
   <ChakraProvider theme={theme}>
     <Box textAlign='center' fontSize='xl'>
       <Header />
-      <FrontEnd />
+      <Skills />
     </Box>
   </ChakraProvider>
 );

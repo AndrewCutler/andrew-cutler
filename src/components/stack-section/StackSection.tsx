@@ -15,11 +15,13 @@ const StackSection = ({
   return (
     <Box
       textAlign='left'
-      marginY={8}
-      bg={invert ? 'dark.500' : 'light.200'}
-      color={invert ? 'light.200' : 'dark.400'}
+      paddingY={8}
+      bg={invert ? 'dark.800' : 'light.200'}
+      color={invert ? 'light.200' : 'dark.700'}
     >
-      <Text paddingLeft={5}>{title}</Text>
+      <Text paddingLeft={5} fontWeight='600'>
+        {title}
+      </Text>
       <StackRow
         invert={invert}
         imgSrc={jsLogo}

@@ -19,20 +19,22 @@ const StackRow = ({
   return (
     <Flex
       paddingLeft={7}
-      bg={invert ? 'light.200' : 'dark.500'}
+      border='4px solid'
+      borderColor='primary.500'
+      bg={invert ? 'light.200' : 'dark.800'}
       color={invert ? 'dark.400' : 'light.200'}
       alignItems='center'
       w='100vw'
       marginLeft={5}
-      marginY={3}
+      marginY={10}
       paddingY={3}
-      borderRadius='50px 0% 0% 50px'
+      borderRadius='60px 0% 0% 60px'
     >
       <Box marginRight={4}>
         <ImageRound dimension={50} src={imgSrc} alt={imgAlt} />
       </Box>
       <Box>
-        <Text>{subtitle}</Text>
+        <Text color='primary.700'>{subtitle}</Text>
         <Text fontSize='md'>{textContent}</Text>
       </Box>
     </Flex>
