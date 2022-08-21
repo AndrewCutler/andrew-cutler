@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import Header from './components/header/Header';
 import Skills from './components/skills/Skills';
+import Bio from './components/bio/Bio';
 
 const theme = extendTheme({
   fonts: {
@@ -66,8 +67,9 @@ const theme = extendTheme({
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign='center' fontSize='xl'>
+    <Box textAlign='center' fontSize='xl' overflowX='hidden' width='100vw'>
       <Header />
+      <Bio />
       <Skills />
     </Box>
   </ChakraProvider>

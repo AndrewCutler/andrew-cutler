@@ -1,0 +1,7 @@
+1. Fix margin/padding and overflow issues for body
+2. Add actual text content
+3. Replace front-end rows with actual back-end stuff
+4. Fill out "other stuff" section
+5. Add resume
+6. Add portfolio section
+7. Adjust responsive design
