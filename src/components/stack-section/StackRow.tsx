@@ -1,6 +1,5 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { ReactElement } from 'react';
-import jsLogo from '../../assets/images/js-logo.png';
 import ImageRound from '../image-round/ImageRound';
 
 const StackRow = ({

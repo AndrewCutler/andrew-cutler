@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import { Text } from '@chakra-ui/react';
 
 const words = [
@@ -22,7 +22,7 @@ const TextType = (): ReactElement => {
   const word = words[index];
 
   useEffect(() => {
-    let interval = window.setInterval(() => {
+    const interval = window.setInterval(() => {
       if (!done) {
         setText(word.slice(0, letterIndex));
         setLetterIndex(letterIndex + 1);
