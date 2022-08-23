@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import React, { Box } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
 const GradientBorder = ({ ltr = true }: { ltr?: boolean }): ReactElement => {
