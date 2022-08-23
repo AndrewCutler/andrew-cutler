@@ -1,5 +1,5 @@
 import { Flex, Icon, Image, Text } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import photo from '../../assets/images/me.jpeg';
 import TextType from '../text-type/TextType';
 import { IconButton } from '@chakra-ui/react';
