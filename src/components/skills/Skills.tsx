@@ -1,5 +1,6 @@
-import { Box, Flex } from '@chakra-ui/react';
+import React, { Flex } from '@chakra-ui/react';
 import { ReactElement } from 'react';
+import GradientBorder from '../gradient-border/GradientBorder';
 import StackSection from '../stack-section/StackSection';
 
 const Skills = (): ReactElement => (

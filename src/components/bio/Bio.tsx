@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import React, { Flex, Text } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import GradientBorder from '../gradient-border/GradientBorder';
 
