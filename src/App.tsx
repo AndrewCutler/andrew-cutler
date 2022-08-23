@@ -13,6 +13,7 @@ import Header from './components/header/Header';
 import Skills from './components/skills/Skills';
 import Bio from './components/bio/Bio';
 import Portfolio from './components/portfolio/Portfolio';
+import Contact from './components/contact/Contact';
 
 const theme = extendTheme({
   fonts: {
@@ -73,6 +74,7 @@ export const App = () => (
       <Bio />
       <Skills />
       <Portfolio />
+      <Contact />
     </Box>
   </ChakraProvider>
 );
