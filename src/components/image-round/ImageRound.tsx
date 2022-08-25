@@ -1,5 +1,5 @@
-import { ReactElement } from 'react';
-import { Image } from '@chakra-ui/react';
+import React, { ReactElement } from 'react';
+import { Box, Image } from '@chakra-ui/react';
 
 const ImageRound = ({
   src,
@@ -10,15 +10,17 @@ const ImageRound = ({
   alt: string;
   dimension?: number;
 }): ReactElement => (
-  <Image
-    src={src}
-    alt={alt}
-    borderRadius='50%'
-    border='3px solid'
-    borderColor='light.700'
-    w={dimension}
-    h={dimension}
-  />
+  <Box>
+    <Image
+      src={src}
+      alt={alt}
+      borderRadius='50%'
+      border='3px solid'
+      borderColor='light.700'
+      w={dimension}
+      h={dimension}
+    />
+  </Box>
 );
 
 export default ImageRound;

@@ -6,7 +6,7 @@ const GradientBorder = ({ ltr = true }: { ltr?: boolean }): ReactElement => {
     ltr ? 'to-r' : 'to-l'
   }, primary.500, secondary.600)`;
 
-  return <Box h='3px' w='100vw' bgGradient={gradient} />;
+  return <Box h='3px' bgGradient={gradient} />;
 };
 
 export default GradientBorder;

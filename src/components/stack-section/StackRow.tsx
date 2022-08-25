@@ -1,5 +1,5 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import ImageRound from '../image-round/ImageRound';
 
 const StackRow = ({
@@ -23,7 +23,6 @@ const StackRow = ({
       bg={invert ? 'light.200' : 'dark.800'}
       color={invert ? 'dark.400' : 'light.200'}
       alignItems='center'
-      w='100vw'
       marginLeft={5}
       marginY={10}
       paddingY={3}

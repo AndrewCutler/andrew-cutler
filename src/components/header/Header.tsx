@@ -10,7 +10,8 @@ import ImageRound from '../image-round/ImageRound';
 const Header = (): ReactElement => {
   return (
     <Flex
-      padding={2}
+      paddingY={2}
+      paddingX={7}
       bg='dark.700'
       color='light.200'
       alignItems='center'

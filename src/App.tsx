@@ -69,7 +69,7 @@ const theme = extendTheme({
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign='center' fontSize='xl' overflowX='hidden' width='100vw'>
+    <Box textAlign='center' fontSize='xl' overflowX='hidden'>
       <Header />
       <Bio />
       <Skills />
