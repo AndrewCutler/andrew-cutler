@@ -7,13 +7,13 @@ const StackRow = ({
   imgAlt,
   subtitle,
   textContent,
-  invert,
+  invert = false,
 }: {
   imgSrc: string;
   imgAlt: string;
   subtitle: string;
   textContent: string;
-  invert: boolean;
+  invert?: boolean;
 }): ReactElement => {
   return (
     <Flex

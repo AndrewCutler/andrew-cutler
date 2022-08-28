@@ -1,5 +1,5 @@
 import React, { Box, Text } from '@chakra-ui/react';
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import jsLogo from '../../assets/images/js-logo.png';
 import angularLogo from '../../assets/images/angular-logo.jpg';
 import reactLogo from '../../assets/images/react-logo.png';
@@ -9,9 +9,11 @@ import GradientBorder from '../gradient-border/GradientBorder';
 const StackSection = ({
   title,
   invert = false,
+  children,
 }: {
   title: string;
   invert?: boolean;
+  children: ReactNode[];
 }): ReactElement => {
   return (
     <>
@@ -24,7 +26,8 @@ const StackSection = ({
         <Text paddingLeft={5} fontWeight='600'>
           {title}
         </Text>
-        <StackRow
+        {children}
+        {/* <StackRow
           invert={invert}
           imgSrc={jsLogo}
           imgAlt='JavaScript'
@@ -53,7 +56,7 @@ const StackSection = ({
             eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
             iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
             sunt illum.'
-        />
+        /> */}
       </Box>
       <GradientBorder ltr={invert} />
     </>
