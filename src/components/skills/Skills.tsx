@@ -5,7 +5,9 @@ import reactLogo from '../../assets/images/react-logo.png';
 import cSharpLogo from '../../assets/images/c-sharp-logo.jpg';
 import dotNetLogo from '../../assets/images/dotnet-logo.png';
 import sqlLogo from '../../assets/images/sql-logo.png';
+import testingLogo from '../../assets/images/testing-logo.png';
 import angularLogo from '../../assets/images/angular-logo.jpg';
+import rustLogo from '../../assets/images/rust-logo.svg';
 import StackSection from '../stack-section/StackSection';
 import StackRow, { IStackRowProps } from '../stack-section/StackRow';
 
@@ -20,7 +22,7 @@ const frontEndRows: Row = [
   {
     imgSrc: reactLogo,
     subtitle: 'React',
-    textContent: `React is by far my favorite front-end framework (ahem, library).`, // todo
+    textContent: `React is by far my favorite front-end framework (ahem, library) and it's what I used to build this site. I love how unopinionated it is and how far you can go with it very quickly, especially when you understand how and when it re-renders. It's a breeze to develop with once you grasp its idiosyncracies, like hooks, useCallback/useEffect/useMemo, React.memo, HOCs, context, refs, etc. (And not just what they are, but why and how the work.)`, // todo
     invert: true,
   },
   {
@@ -61,7 +63,24 @@ const backEndRows: Row = [
   },
 ];
 
-const otherRows: Row = [];
+const otherRows: Row = [
+  {
+    imgSrc: testingLogo,
+    subtitle: 'Testing',
+    // todo
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+  eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+  iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+  sunt illum.`,
+  },
+  {
+    imgSrc: rustLogo,
+    subtitle: 'Rust',
+    // todo
+    textContent: `I'm still very much a noob, but`,
+    invert: true,
+  },
+];
 
 const Skills = (): ReactElement => (
   <Flex flexDirection='column'>

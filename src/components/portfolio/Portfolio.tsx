@@ -27,7 +27,7 @@ const projects: IProject[] = [
     img: '',
   },
   {
-    name: 'Nutrifind',
+    name: 'MLB Compare',
     url: 'http://nutrifind.s3-website-us-east-1.amazonaws.com/',
     description:
       'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
