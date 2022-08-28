@@ -15,33 +15,25 @@ const frontEndRows: Row = [
   {
     imgSrc: jsLogo,
     subtitle: 'JavaScript',
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `TypeScript, too! I have a soft spot in my heart for all things JavaScript, and as a web developer I have put a concerted effor into honing my comprehension of and proficiency with the language and its ecosystem. That would include all the basics like classes, data types, ES6 syntax, closures, and string and array methods, but also the nitty-gritty details like proxies, the event loop, IIFEs and others. That being said, I'm learning more every day.`,
   },
   {
     imgSrc: reactLogo,
     subtitle: 'React',
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `React is by far my favorite front-end framework (ahem, library).`, // todo
     invert: true,
   },
   {
     imgSrc: angularLogo,
     subtitle: 'Angular',
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `I have worked with AngularJS and Angular2+ for my entire career, developing and testing both small- and medium-to-large-sized web applications.`, // todo
   },
 ];
 const backEndRows: Row = [
   {
     imgSrc: cSharpLogo,
     subtitle: 'C#',
+    // todo
     textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
     eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
@@ -51,6 +43,7 @@ const backEndRows: Row = [
   {
     imgSrc: dotNetLogo,
     subtitle: '.NET',
+    // todo
     textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
     eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
@@ -59,6 +52,7 @@ const backEndRows: Row = [
   {
     imgSrc: sqlLogo,
     subtitle: 'SQL',
+    // todo
     textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
     eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
