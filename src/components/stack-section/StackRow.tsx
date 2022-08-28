@@ -2,19 +2,21 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
 import ImageRound from '../image-round/ImageRound';
 
+export interface IStackRowProps {
+  imgSrc: string;
+  imgAlt: string;
+  subtitle: string;
+  textContent: string;
+  invert?: boolean;
+}
+
 const StackRow = ({
   imgSrc,
   imgAlt,
   subtitle,
   textContent,
   invert = false,
-}: {
-  imgSrc: string;
-  imgAlt: string;
-  subtitle: string;
-  textContent: string;
-  invert?: boolean;
-}): ReactElement => {
+}: IStackRowProps): ReactElement => {
   return (
     <Flex
       paddingLeft={7}

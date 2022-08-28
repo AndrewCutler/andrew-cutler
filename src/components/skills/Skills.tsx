@@ -1,106 +1,111 @@
 import React, { Flex } from '@chakra-ui/react';
 import { ReactElement } from 'react';
-import GradientBorder from '../gradient-border/GradientBorder';
 import jsLogo from '../../assets/images/js-logo.png';
-import angularLogo from '../../assets/images/angular-logo.jpg';
 import reactLogo from '../../assets/images/react-logo.png';
+import cSharpLogo from '../../assets/images/c-sharp-logo.jpg';
+import dotNetLogo from '../../assets/images/dotnet-logo.png';
+import sqlLogo from '../../assets/images/sql-logo.png';
+import angularLogo from '../../assets/images/angular-logo.jpg';
 import StackSection from '../stack-section/StackSection';
-import StackRow from '../stack-section/StackRow';
+import StackRow, { IStackRowProps } from '../stack-section/StackRow';
 
-const frontEndRows = [{}];
+type Row = Omit<IStackRowProps, 'imgAlt'>[];
+
+const frontEndRows: Row = [
+  {
+    imgSrc: jsLogo,
+    subtitle: 'JavaScript',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+  },
+  {
+    imgSrc: reactLogo,
+    subtitle: 'React',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+    invert: true,
+  },
+  {
+    imgSrc: angularLogo,
+    subtitle: 'Angular',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+  },
+];
+const backEndRows: Row = [
+  {
+    imgSrc: cSharpLogo,
+    subtitle: 'C#',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+    invert: true,
+  },
+  {
+    imgSrc: dotNetLogo,
+    subtitle: '.NET',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+  },
+  {
+    imgSrc: sqlLogo,
+    subtitle: 'SQL',
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+    invert: true,
+  },
+];
+
+const otherRows: Row = [];
 
 const Skills = (): ReactElement => (
   <Flex flexDirection='column'>
     <StackSection title='Front-end'>
-      <StackRow
-        imgSrc={jsLogo}
-        imgAlt='JavaScript'
-        subtitle='JavaScript'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        invert
-        imgSrc={reactLogo}
-        imgAlt='React'
-        subtitle='React'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        imgSrc={angularLogo}
-        imgAlt='Angular'
-        subtitle='Angular'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
+      {frontEndRows.map(({ imgSrc, subtitle, textContent, invert }) => (
+        <StackRow
+          key={subtitle}
+          imgSrc={imgSrc}
+          imgAlt={subtitle}
+          subtitle={subtitle}
+          textContent={textContent}
+          invert={invert}
+        />
+      ))}
     </StackSection>
     <StackSection invert title='Back-end'>
-      <StackRow
-        invert
-        imgSrc={jsLogo}
-        imgAlt='JavaScript'
-        subtitle='JavaScript'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        imgSrc={reactLogo}
-        imgAlt='React'
-        subtitle='React'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        invert
-        imgSrc={angularLogo}
-        imgAlt='Angular'
-        subtitle='Angular'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
+      {backEndRows.map(({ imgSrc, subtitle, textContent, invert }) => (
+        <StackRow
+          key={subtitle}
+          imgSrc={imgSrc}
+          imgAlt={subtitle}
+          subtitle={subtitle}
+          textContent={textContent}
+          invert={invert}
+        />
+      ))}
     </StackSection>
     <StackSection title='All the rest'>
-      <StackRow
-        imgSrc={jsLogo}
-        imgAlt='JavaScript'
-        subtitle='JavaScript'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        invert
-        imgSrc={reactLogo}
-        imgAlt='React'
-        subtitle='React'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
-      <StackRow
-        imgSrc={angularLogo}
-        imgAlt='Angular'
-        subtitle='Angular'
-        textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-      />
+      {otherRows.map(({ imgSrc, subtitle, textContent, invert }) => (
+        <StackRow
+          key={subtitle}
+          imgSrc={imgSrc}
+          imgAlt={subtitle}
+          subtitle={subtitle}
+          textContent={textContent}
+          invert={invert}
+        />
+      ))}
     </StackSection>
   </Flex>
 );
