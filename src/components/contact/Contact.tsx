@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import { IconType } from 'react-icons';
 
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
+import { githubUrl, linkedInUrl } from '../../constants/urls';
 
 const ContactIcon = ({
   icon,
@@ -25,14 +26,8 @@ const ContactIcon = ({
 const Contact = (): ReactElement => {
   return (
     <Flex paddingY={1} justifyContent='center'>
-      <ContactIcon
-        icon={AiFillLinkedin}
-        link='https://www.linkedin.com/in/andrewkcutler/'
-      />
-      <ContactIcon
-        icon={AiOutlineGithub}
-        link='https://github.com/AndrewCutler'
-      />
+      <ContactIcon icon={AiFillLinkedin} link={linkedInUrl} />
+      <ContactIcon icon={AiOutlineGithub} link={githubUrl} />
       <ContactIcon
         icon={AiOutlineMail}
         link='mailto:@andrewkcutler@gmail.com'

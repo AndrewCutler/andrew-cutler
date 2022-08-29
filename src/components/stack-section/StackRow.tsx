@@ -28,6 +28,7 @@ const StackRow = ({
       marginLeft={5}
       marginY={10}
       paddingY={3}
+      minHeight='114px'
       borderRadius='60px 0% 0% 60px'
     >
       <Box marginRight={4}>

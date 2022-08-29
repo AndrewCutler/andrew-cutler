@@ -23,8 +23,9 @@ const projects: IProject[] = [
     name: 'Nutrifind',
     url: 'http://nutrifind.s3-website-us-east-1.amazonaws.com/',
     description:
-      'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
+      'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iure consequuntur dolorem tenetur dolores nam perspiciatis vel quod. Quae, soluta?',
     img: '',
+    details: ['React'],
   },
   {
     name: 'MLB Compare',
@@ -32,6 +33,7 @@ const projects: IProject[] = [
     description:
       'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
     img: '',
+    details: ['React', 'cheeriojs', 'ExpressJS'],
   },
   {
     name: 'Nutrifind',
@@ -39,6 +41,7 @@ const projects: IProject[] = [
     description:
       'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
     img: '',
+    details: ['React'],
   },
   {
     name: 'Nutrifind',
@@ -46,6 +49,7 @@ const projects: IProject[] = [
     description:
       'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
     img: '',
+    details: ['React'],
   },
 ];
 
@@ -53,8 +57,8 @@ const Portfolio = (): ReactElement => {
   return (
     <>
       <VStack bg='dark.800' color='light.200' paddingY={5}>
-        {projects.map((project) => (
-          <Flex marginY={5} key={project.name}>
+        {projects.map(({ name, description, details }) => (
+          <Flex marginY={5} key={name} width='66vw'>
             <Image marginRight={4} src={jsLogo} alt='' w='125' h='125' />
             <Flex
               flexDirection='column'
@@ -63,39 +67,21 @@ const Portfolio = (): ReactElement => {
             >
               <Flex flexDirection='column'>
                 <Text fontWeight='600' fontSize='lg'>
-                  {project.name}
+                  {name}
                 </Text>
-                <Text fontSize='md'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores aperiam explicabo nesciunt. Quas dolor ad corrupti.
-                  Molestias atque dolorum laboriosam?
-                </Text>
+                <Text fontSize='md'>{description}</Text>
               </Flex>
               <Flex>
-                <Box margin={4}>
-                  <Icon
-                    marginRight={1}
-                    as={BsCheckCircle}
-                    color='secondary.300'
-                  />
-                  Lorem ipsum
-                </Box>
-                <Box margin={4}>
-                  <Icon
-                    marginRight={1}
-                    as={BsCheckCircle}
-                    color='secondary.300'
-                  />
-                  Assumenda
-                </Box>
-                <Box margin={4}>
-                  <Icon
-                    marginRight={1}
-                    as={BsCheckCircle}
-                    color='secondary.300'
-                  />
-                  Quidem
-                </Box>
+                {details.map((detail) => (
+                  <Box margin={4}>
+                    <Icon
+                      marginRight={1}
+                      as={BsCheckCircle}
+                      color='secondary.300'
+                    />
+                    {detail}
+                  </Box>
+                ))}
               </Flex>
             </Flex>
           </Flex>

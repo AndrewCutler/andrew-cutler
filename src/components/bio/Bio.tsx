@@ -38,7 +38,7 @@ const Bio = (): ReactElement => {
           growth-mindset team environments; decision-maker; constantly learning.
         </Text>
         <Divider marginY={8} />
-        <Text>
+        <Text marginBottom={8}>
           And for fun, I really enjoy chess, baseball, reading, working out, and
           most of all, spending time with my family.
         </Text>

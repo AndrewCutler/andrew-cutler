@@ -6,6 +6,7 @@ import { IconButton } from '@chakra-ui/react';
 
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import ImageRound from '../image-round/ImageRound';
+import { githubUrl, linkedInUrl } from '../../constants/urls';
 
 const Header = (): ReactElement => {
   return (
@@ -32,6 +33,7 @@ const Header = (): ReactElement => {
           borderColor='light.700'
           aria-label='github button'
           margin='1'
+          onClick={() => window.open(githubUrl)}
           icon={<Icon as={AiOutlineGithub} />}
         />
         <IconButton
@@ -40,7 +42,8 @@ const Header = (): ReactElement => {
           bg='dark.700'
           border='2px solid'
           borderColor='light.700'
-          aria-label='github button'
+          aria-label='linked in button'
+          onClick={() => window.open(linkedInUrl)}
           icon={<Icon as={AiFillLinkedin} />}
         />
       </Flex>
