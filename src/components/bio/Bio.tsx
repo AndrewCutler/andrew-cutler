@@ -9,8 +9,8 @@ const Bio = (): ReactElement => {
         bg='light.500'
         flexDirection='column'
         textAlign='left'
-        paddingX={4}
-        paddingY={6}
+        paddingX='3%'
+        paddingY={2}
       >
         <Text color='primary.900' fontWeight='600' marginBottom={2}>
           Who am I?
