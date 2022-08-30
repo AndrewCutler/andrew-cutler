@@ -1,16 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  VStack,
-  Text,
-  List,
-  ListIcon,
-  ListItem,
-  Icon,
-} from '@chakra-ui/react';
+import { Box, Flex, Image, VStack, Text, Icon } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
 
 import GradientBorder from '../gradient-border/GradientBorder';
@@ -18,6 +6,7 @@ import { BsCheckCircle } from 'react-icons/bs';
 import jsLogo from '../../assets/images/js-logo.png';
 import baseCrawl from '../../assets/images/base-crawl.png';
 import nutrifind from '../../assets/images/nutrifind.png';
+import andrewCutler from '../../assets/images/andrew-cutler.png';
 import { IProject } from '../../models/project.interface';
 
 const projects: IProject[] = [
@@ -46,11 +35,11 @@ const projects: IProject[] = [
     details: ['React'],
   },
   {
-    name: 'Nutrifind',
-    url: 'http://nutrifind.s3-website-us-east-1.amazonaws.com/',
+    name: 'This site!',
+    url: '',
     description:
-      'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
-    img: '',
+      'What developer worth his salt doesn\t enjoy a recursion joke?',
+    img: andrewCutler,
     details: ['React'],
   },
 ];
