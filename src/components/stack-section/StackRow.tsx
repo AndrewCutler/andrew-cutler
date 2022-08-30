@@ -8,6 +8,7 @@ export interface IStackRowProps {
   subtitle: string;
   textContent: string;
   invert?: boolean;
+  isDark?: boolean;
 }
 
 const StackRow = ({
@@ -16,6 +17,7 @@ const StackRow = ({
   subtitle,
   textContent,
   invert = false,
+  isDark = false,
 }: IStackRowProps): ReactElement => {
   return (
     <Flex
@@ -25,6 +27,7 @@ const StackRow = ({
       bg={invert ? 'light.200' : 'dark.800'}
       color={invert ? 'dark.400' : 'light.200'}
       alignItems='center'
+      boxShadow={isDark ? 'light' : 'dark-lg'}
       marginLeft={5}
       marginY={10}
       paddingY={3}

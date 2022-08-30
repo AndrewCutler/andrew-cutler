@@ -41,6 +41,7 @@ const backEndRows: Row = [
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
     sunt illum.`,
     invert: true,
+    isDark: true,
   },
   {
     imgSrc: dotNetLogo,
@@ -50,6 +51,7 @@ const backEndRows: Row = [
     eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
     sunt illum.`,
+    isDark: true,
   },
   {
     imgSrc: sqlLogo,
@@ -60,6 +62,7 @@ const backEndRows: Row = [
     iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
     sunt illum.`,
     invert: true,
+    isDark: true,
   },
 ];
 
@@ -68,10 +71,7 @@ const otherRows: Row = [
     imgSrc: testingLogo,
     subtitle: 'Testing',
     // todo
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-  eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-  iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-  sunt illum.`,
+    textContent: `Some consider it a necessary evil; I just consider it necessary. I am of the belief that adequate test coverage not only improves code quality and bug prevention, but improves developer quality as well by forcing us to make considerations for things we normally might not, whether it be Karma with Angular, Jest with React, or XUnit with C#.`,
   },
   {
     imgSrc: rustLogo,
@@ -97,7 +97,7 @@ const Skills = (): ReactElement => (
       ))}
     </StackSection>
     <StackSection invert title='Back-end'>
-      {backEndRows.map(({ imgSrc, subtitle, textContent, invert }) => (
+      {backEndRows.map(({ imgSrc, subtitle, textContent, invert, isDark }) => (
         <StackRow
           key={subtitle}
           imgSrc={imgSrc}
@@ -105,6 +105,7 @@ const Skills = (): ReactElement => (
           subtitle={subtitle}
           textContent={textContent}
           invert={invert}
+          isDark={isDark}
         />
       ))}
     </StackSection>
