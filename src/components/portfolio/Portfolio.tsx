@@ -27,16 +27,8 @@ const projects: IProject[] = [
     details: ['React', 'ChakraUI', 'cheeriojs', 'ExpressJS'],
   },
   {
-    name: 'Nutrifind',
-    url: 'http://nutrifind.s3-website-us-east-1.amazonaws.com/',
-    description:
-      'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla.',
-    img: '',
-    details: ['React'],
-  },
-  {
     name: 'This site!',
-    url: '',
+    url: window.location.href,
     description:
       'What developer worth his salt doesn\t enjoy a recursion joke?',
     img: andrewCutler,
@@ -44,69 +36,64 @@ const projects: IProject[] = [
   },
 ];
 
-const Portfolio = (): ReactElement => {
-  const handleClick = (url: string): void => {
-    window.open(url);
-  };
-
-  return (
-    <>
-      <VStack bg='dark.800' color='light.200' paddingY={5}>
-        {projects.map(({ name, description, details, url, img }) => (
-          <Flex marginY={5} key={name} width='66vw'>
-            <Image
-              onClick={() => handleClick(url)}
-              cursor='pointer'
-              borderRadius='5px'
-              border='4px solid'
-              borderColor='light.300'
-              _hover={{
-                textDecoration: 'underline',
-                border: '4px solid',
-                borderColor: 'secondary.300',
-              }}
-              marginRight={4}
-              src={img || jsLogo}
-              alt={name}
-              maxWidth='125'
-              maxHeight='125'
-            />
-            <Flex
-              flexDirection='column'
-              textAlign='left'
-              justifyContent='space-between'
-            >
-              <Flex flexDirection='column'>
-                <Text
-                  onClick={() => handleClick(url)}
-                  cursor='pointer'
-                  _hover={{ textDecoration: 'underline' }}
-                  fontWeight='600'
-                  fontSize='lg'
-                >
-                  {name}
-                </Text>
-                <Text fontSize='md'>{description}</Text>
-              </Flex>
-              <Flex>
-                {details.map((detail) => (
-                  <Box margin={4}>
-                    <Icon
-                      marginRight={1}
-                      as={BsCheckCircle}
-                      color='secondary.300'
-                    />
-                    {detail}
-                  </Box>
-                ))}
-              </Flex>
+const Portfolio = (): ReactElement => (
+  <>
+    <VStack bg='dark.800' color='light.200' paddingY={5}>
+      {projects.map(({ name, description, details, url, img }) => (
+        // !important because the first project has different padding for some reason
+        <Flex marginY='16px !important' key={name} width='66vw'>
+          <Image
+            onClick={() => window.open(url)}
+            cursor='pointer'
+            borderRadius='5px'
+            border='4px solid'
+            borderColor='light.300'
+            _hover={{
+              textDecoration: 'underline',
+              border: '4px solid',
+              borderColor: 'secondary.300',
+            }}
+            marginRight={4}
+            src={img || jsLogo}
+            alt={name}
+            maxWidth='125'
+            maxHeight='125'
+          />
+          <Flex
+            flexDirection='column'
+            textAlign='left'
+            justifyContent='space-between'
+          >
+            <Flex flexDirection='column'>
+              <Text
+                onClick={() => window.open(url)}
+                cursor='pointer'
+                _hover={{ textDecoration: 'underline' }}
+                fontWeight='600'
+                fontSize='lg'
+              >
+                {name}
+              </Text>
+              <Text fontSize='md'>{description}</Text>
+            </Flex>
+            <Flex>
+              {details.map((detail) => (
+                <Box margin={4}>
+                  <Icon
+                    marginRight={1}
+                    as={BsCheckCircle}
+                    color='secondary.300'
+                  />
+                  {detail}
+                </Box>
+              ))}
             </Flex>
           </Flex>
-        ))}
-      </VStack>
-      <GradientBorder />
-    </>
-  );
-};
+        </Flex>
+      ))}
+    </VStack>
+    <GradientBorder />
+  </>
+);
 
 export default Portfolio;

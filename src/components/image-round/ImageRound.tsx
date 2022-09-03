@@ -17,8 +17,10 @@ const ImageRound = ({
       borderRadius='50%'
       border='3px solid'
       borderColor='light.700'
-      w={dimension}
-      h={dimension}
+      maxWidth={dimension}
+      maxHeight={dimension}
+      minWidth={dimension}
+      minHeight={dimension}
     />
   </Box>
 );
