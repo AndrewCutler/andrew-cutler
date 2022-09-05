@@ -29,6 +29,7 @@ const StackRow = ({
       alignItems='center'
       boxShadow={isDark ? 'light' : 'dark-lg'}
       marginLeft={5}
+      maxHeight='82px'
       marginY={10}
       paddingY={3}
       minHeight='114px'

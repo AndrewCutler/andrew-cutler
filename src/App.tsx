@@ -5,6 +5,7 @@ import Skills from './components/skills/Skills';
 import Bio from './components/bio/Bio';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
+import Resume from './components/resume/Resume';
 
 const App = () => {
   const isDesktop = useBreakpointValue({ lg: true });
@@ -21,6 +22,7 @@ const App = () => {
       <Bio />
       <Skills />
       <Portfolio />
+      <Resume />
       <Contact />
     </Box>
   );

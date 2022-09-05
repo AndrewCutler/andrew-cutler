@@ -27,36 +27,6 @@ const StackSection = ({
           {title}
         </Text>
         {children}
-        {/* <StackRow
-          invert={invert}
-          imgSrc={jsLogo}
-          imgAlt='JavaScript'
-          subtitle='JavaScript'
-          textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-        />
-        <StackRow
-          invert={invert}
-          imgSrc={reactLogo}
-          imgAlt='React'
-          subtitle='React'
-          textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-        />
-        <StackRow
-          invert={invert}
-          imgSrc={angularLogo}
-          imgAlt='Angular'
-          subtitle='Angular'
-          textContent='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-            eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-            iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-            sunt illum.'
-        /> */}
       </Box>
       <GradientBorder ltr={invert} />
     </>
