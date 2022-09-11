@@ -27,6 +27,14 @@ const projects: IProject[] = [
     details: ['React', 'ChakraUI', 'cheeriojs', 'ExpressJS'],
   },
   {
+    name: 'todos-cli',
+    url: 'https://github.com/AndrewCutler/todos-cli',
+    description:
+      'A console application for managing the proof-of-concept classic, a todo list',
+    img: baseCrawl,
+    details: ['C#', '.NET', 'console app'],
+  },
+  {
     name: 'This site!',
     url: window.location.href,
     description:
@@ -78,7 +86,7 @@ const Portfolio = (): ReactElement => (
             </Flex>
             <Flex>
               {details.map((detail) => (
-                <Box margin={4}>
+                <Box margin={4} key={detail.replace(/\s+/g, '_')}>
                   <Icon
                     marginRight={1}
                     as={BsCheckCircle}

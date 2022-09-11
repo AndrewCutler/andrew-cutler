@@ -6,6 +6,7 @@ import cSharpLogo from '../../assets/images/c-sharp-logo.jpg';
 import dotNetLogo from '../../assets/images/dotnet-logo.png';
 import sqlLogo from '../../assets/images/sql-logo.png';
 import testingLogo from '../../assets/images/testing-logo.png';
+import jiraLogo from '../../assets/images/jira-logo.png';
 import angularLogo from '../../assets/images/angular-logo.jpg';
 import rustLogo from '../../assets/images/rust-logo.svg';
 import StackSection from '../stack-section/StackSection';
@@ -17,18 +18,18 @@ const frontEndRows: Row = [
   {
     imgSrc: jsLogo,
     subtitle: 'JavaScript',
-    textContent: `TypeScript, too! I have a soft spot in my heart for all things JavaScript, and as a web developer I have put a concerted effor into honing my comprehension of and proficiency with the language and its ecosystem. That would include all the basics like classes, data types, ES6 syntax, closures, and string and array methods, but also the nitty-gritty details like proxies, the event loop, IIFEs and others. That being said, I'm learning more every day.`,
+    textContent: `TypeScript, promises, async/await, ES6 syntax, spread operator/destructuring, OOP, fetch/axios, regular expressions, JSON, DOM interactions, cookies and localStorage`,
   },
   {
     imgSrc: reactLogo,
     subtitle: 'React',
-    textContent: `React is by far my favorite front-end framework (ahem, library) and it's what I used to build this site. I love how unopinionated it is and how far you can go with it very quickly, especially when you understand how and when it re-renders. It's a breeze to develop with once you grasp its idiosyncracies, like hooks, useCallback/useEffect/useMemo, React.memo, HOCs, context, refs, etc. (And not just what they are, but why and how the work.)`, // todo
+    textContent: `Design and develop large-scale web application front-ends with React 17+, with the use of JSX/TSX, hooks, context, functional components, HOCs, and React standard libraries such as React Router, react-query, Redux and Redux toolkit`,
     invert: true,
   },
   {
     imgSrc: angularLogo,
     subtitle: 'Angular',
-    textContent: `I have worked with AngularJS and Angular2+ for my entire career, developing and testing both small- and medium-to-large-sized web applications.`, // todo
+    textContent: `Experience with AngularJS and Angular2+, including lazy loading modules, routing (guards and resolvers), lifecycle hooks, reactive and template-driven forms`,
   },
 ];
 const backEndRows: Row = [
@@ -36,10 +37,7 @@ const backEndRows: Row = [
     imgSrc: cSharpLogo,
     subtitle: 'C#',
     // todo
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `C# 10, LINQ, Visual Studio, OOP design`,
     invert: true,
     isDark: true,
   },
@@ -47,20 +45,13 @@ const backEndRows: Row = [
     imgSrc: dotNetLogo,
     subtitle: '.NET',
     // todo
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `Building and maintaining APIs, web applications, console applications, architectural design, MVC design pattern`,
     isDark: true,
   },
   {
     imgSrc: sqlLogo,
     subtitle: 'SQL',
-    // todo
-    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
-    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
-    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
-    sunt illum.`,
+    textContent: `Design and plan database structure for web applications; compose queries to select, update and delete; triggers, stored procedures, views, and temporal tables`,
     invert: true,
     isDark: true,
   },
@@ -71,14 +62,21 @@ const otherRows: Row = [
     imgSrc: testingLogo,
     subtitle: 'Testing',
     // todo
-    textContent: `Some consider it a necessary evil; I just consider it necessary. I am of the belief that adequate test coverage not only improves code quality and bug prevention, but improves developer quality as well by forcing us to make considerations for things we normally might not, whether it be Karma with Angular, Jest with React, or XUnit with C#.`,
+    textContent: `XUnit, Moq and AutoMapper on the backend; Karma, Jasmine, Spectator for Angular; Jest, react-testing-library for React`,
   },
   {
-    imgSrc: rustLogo,
-    subtitle: 'Rust',
+    imgSrc: jiraLogo,
+    subtitle: 'Jira',
     // todo
-    textContent: `I'm still very much a noob, but`,
-    invert: true,
+    textContent: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem enim
+    eligendi illo! Necessitatibus, fuga vitae. Nam similique quod maxime
+    iusto iure, pariatur suscipit vero explicabo esse aspernatur dicta
+    sunt illum.`,
+  },
+  {
+    imgSrc: jiraLogo,
+    subtitle: 'CI/CD',
+    textContent: `Work with devops engineers to create GitLab pipelines; coordinate with QA engineers to provide stable and testable deployments; assist support engineers with deploying and updating web applications to new release versions`,
   },
 ];
 
