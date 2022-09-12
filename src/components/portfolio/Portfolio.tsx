@@ -6,6 +6,7 @@ import { BsCheckCircle } from 'react-icons/bs';
 import jsLogo from '../../assets/images/js-logo.png';
 import baseCrawl from '../../assets/images/base-crawl.png';
 import nutrifind from '../../assets/images/nutrifind.png';
+import memoria from '../../assets/images/memoria.png';
 import andrewCutler from '../../assets/images/andrew-cutler.png';
 import { IProject } from '../../models/project.interface';
 
@@ -31,8 +32,15 @@ const projects: IProject[] = [
     url: 'https://github.com/AndrewCutler/todos-cli',
     description:
       'A console application for managing the proof-of-concept classic, a todo list',
-    img: baseCrawl,
+    img: baseCrawl, // TODO: get image
     details: ['C#', '.NET', 'console app'],
+  },
+  {
+    name: 'Memoria',
+    url: 'https://memoria.andrewcutler.info/',
+    description: 'Enter text to memorize, and share with others',
+    img: memoria,
+    details: ['React', 'ChakraUI'],
   },
   {
     name: 'This site!',
@@ -48,6 +56,7 @@ const Portfolio = (): ReactElement => (
   <>
     <VStack bg='dark.800' color='light.200' paddingY={5}>
       {projects.map(({ name, description, details, url, img }) => (
+        // TODO: move to a new component, and account for responsive design. Flex column on mobile instead.
         // !important because the first project has different padding for some reason
         <Flex marginY='16px !important' key={name} width='66vw'>
           <Image
