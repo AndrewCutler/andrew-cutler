@@ -2,20 +2,19 @@ import { Box, Flex, Image, VStack, Text, Icon } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
 
 import GradientBorder from '../gradient-border/GradientBorder';
-import { BsCheckCircle } from 'react-icons/bs';
-import jsLogo from '../../assets/images/js-logo.png';
 import baseCrawl from '../../assets/images/base-crawl.png';
 import nutrifind from '../../assets/images/nutrifind.png';
 import memoria from '../../assets/images/memoria.png';
 import andrewCutler from '../../assets/images/andrew-cutler.png';
 import { IProject } from '../../models/project.interface';
+import Project from '../project/Project';
 
 const projects: IProject[] = [
   {
     name: 'Nutrifind',
     url: 'http://nutrifind.s3-website-us-east-1.amazonaws.com/',
     description:
-      'Compare nutrients Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nulla. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, iure consequuntur dolorem tenetur dolores nam perspiciatis vel quod. Quae, soluta?',
+      "Compare the nutritional content of various food items to see what really is a superfood, and what isn't.",
     img: nutrifind,
     details: ['React', 'USDA API', 'ChakraUI'],
   },
@@ -31,14 +30,14 @@ const projects: IProject[] = [
     name: 'todos-cli',
     url: 'https://github.com/AndrewCutler/todos-cli',
     description:
-      'A console application for managing the proof-of-concept classic, a todo list',
+      'A console application for managing the proof-of-concept classic, a todo list.',
     img: baseCrawl, // TODO: get image
     details: ['C#', '.NET', 'console app'],
   },
   {
     name: 'Memoria',
     url: 'https://memoria.andrewcutler.info/',
-    description: 'Enter text to memorize, and share with others',
+    description: 'Enter text to memorize, and share with others.',
     img: memoria,
     details: ['React', 'ChakraUI'],
   },
@@ -55,58 +54,8 @@ const projects: IProject[] = [
 const Portfolio = (): ReactElement => (
   <>
     <VStack bg='dark.800' color='light.200' paddingY={5}>
-      {projects.map(({ name, description, details, url, img }) => (
-        // TODO: move to a new component, and account for responsive design. Flex column on mobile instead.
-        // !important because the first project has different padding for some reason
-        <Flex marginY='16px !important' key={name} width='66vw'>
-          <Image
-            onClick={() => window.open(url)}
-            cursor='pointer'
-            borderRadius='5px'
-            border='4px solid'
-            borderColor='light.300'
-            _hover={{
-              textDecoration: 'underline',
-              border: '4px solid',
-              borderColor: 'secondary.300',
-            }}
-            marginRight={4}
-            src={img || jsLogo}
-            alt={name}
-            maxWidth='125'
-            maxHeight='125'
-          />
-          <Flex
-            flexDirection='column'
-            textAlign='left'
-            justifyContent='space-between'
-          >
-            <Flex flexDirection='column'>
-              <Text
-                onClick={() => window.open(url)}
-                cursor='pointer'
-                _hover={{ textDecoration: 'underline' }}
-                fontWeight='600'
-                fontSize='lg'
-              >
-                {name}
-              </Text>
-              <Text fontSize='md'>{description}</Text>
-            </Flex>
-            <Flex>
-              {details.map((detail) => (
-                <Box margin={4} key={detail.replace(/\s+/g, '_')}>
-                  <Icon
-                    marginRight={1}
-                    as={BsCheckCircle}
-                    color='secondary.300'
-                  />
-                  {detail}
-                </Box>
-              ))}
-            </Flex>
-          </Flex>
-        </Flex>
+      {projects.map((project) => (
+        <Project project={project} key={project.name} />
       ))}
     </VStack>
     <GradientBorder />
